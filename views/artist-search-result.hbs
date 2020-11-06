@@ -1,11 +1,15 @@
-<div class="container">
-    <div class="row">
+<h1>Artists found list</h1>
+
+<div id="artist-search-results">
+    <ul>
         {{#each result}}
         <div class="artist-result">
-            <img src={{this.images.[0].url}} alt="artist-pics">
-            <h3>{{this.name}}</h3>
-            <a href="/albums/{{this.id}}">View Albums</a>
+            <li>
+                <img src={{images.[1].url}} {{!-- [1] gives smaller size than [0] --}} alt="artist-pics">
+                <h3>{{name}}</h3>
+                <a href="/albums/{{id}}">View Albums</a>
+            </li>
         </div>
         {{/each}}
-    </div>
+    </ul>
 </div>

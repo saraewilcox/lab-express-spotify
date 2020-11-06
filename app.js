@@ -31,7 +31,8 @@ app.get('/', (req, res) => {
  })
 
 app.get('/artist-search', (req, res) => {
-  //req.query.artist-search
+  //let artistName = req.query.artist-search
+      //its req.query b/c it comes from the form. artist b/c thats what I named the form. If I use this method then change ".searchArtists(artistName)"
   spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {

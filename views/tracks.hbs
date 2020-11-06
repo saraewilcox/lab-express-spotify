@@ -1,10 +1,12 @@
-<div>
+<h1>Tracks</h1>
+<ul>
     {{#each resultTracks}}
-    <div>
-        <h3>{{this.name}}</h3>
+    <li>
+        {{!-- we don't need to use this on handlebars ever now, its new improved version --}}
+        <h3>{{name}}</h3>
         <audio controls>
-            <source src="{{this.preview_url}}">
+            <source src="{{preview_url}}">
         </audio>
-    </div>
+    </li>
     {{/each}}
-</div>
+</ul>
